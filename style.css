@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html,body{
+  width: 100%;
+  height: 100%;
+}
+:root{
+  --background:#e06c7d;
+  --hover:#e6566c;
+}
+*{
+  padding:0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #db5166 50%,#ffff 50%);
+}
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 500px;
+  gap: 30px;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+.main h1{
+  font-size: 35px;
+}
+.input{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.input input[type="text"]{
+  width: 380px;
+  height: 40px;
+  padding: 5px;
+  font-size: 20px;
+}
+.input button{
+  width: 50px;
+  margin-left: 5px;
+  font-size: 25px;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  border:none;
+  background-color:var(--background);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s all linear;
+}
+.input button:hover{
+  background-color: var(--hover);
+}
+.container{
+  padding: 10px;
+  display: flex;
+  flex-direction:column;
+  gap: 5px;
+  width:100%;
+}
+.part{
+  display: flex;
+  align-items: center;
+  background-color:#fbd5da;
+  justify-content: space-between;
+}
+.part div{
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding: 0 5px;
+  font-size: 17px;
+}
+.part div .fa{
+  font-size: 22px;
+  margin-left: 10px;
+  color: #d93a52;
+  cursor: pointer;
+}
+#title{
+  border: none;
+  padding:0 5px;
+  background-color: transparent;
+  margin-left: 5px;
+  width: 350px;
+  font-size: 17px;
+}
+#title:read-only{
+  outline:none;
+}
+/* Hide the default appearance of the checkbox */
+input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+
+/* Add custom styles to create a new appearance for the checkbox */
+input[type=checkbox]:before {
+  content: "";
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #000000;
+  vertical-align: middle;
+}
+
+/* Add a checkmark when the checkbox is checked */
+input[type=checkbox]:checked:before {
+  content: "\2713";
+  text-align: center;
+  font-size: 16px;
+  color: #05d501;
+  line-height: 20px;
+}
+.footer{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: space-between;
+}
+.footer button{
+  padding: 5px 10px;
+  background-color: var(--background);
+  font-size: 15px;
+  border: none;
+    border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: .3s all linear;
+}
+.footer button:hover{
+  background-color: var(--hover);
+}
+.footer p{
+  height: 30px;
+  width: 200px;
+  border: 1px solid black;
+  display: flex;
+   background: linear-gradient(to right, #c75c6c 100%, transparent 0%);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+#curr,#total{
+  margin: 0 5px;
+}
+@media(max-width:550px){
+
+.main{
+  width: 300px;
+  padding: 10px 20px;
+}
+.input input[type="text"] {
+    width: 215px;
+    height: 30px;
+    padding: 5px;
+    font-size: 15px;
+}
+.footer p{
+    width: 175px;
+    font-size: 15px;
+}
+#title {
+    width: 186px;
+    font-size: 15px;
+}
+.footer button {
+    padding: 5px 0px;
+    margin-left: 12px;
+}
+  
+}
